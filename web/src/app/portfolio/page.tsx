@@ -27,7 +27,6 @@ export default function Home () {
 								</Link>
 								: null
 							}
-
 							{project.link.length > 0
 								? <Link href={project.link} target="_blank">
 									<FontAwesomeIcon className="cursor-pointer" icon={solid_icons.faLink}/>
