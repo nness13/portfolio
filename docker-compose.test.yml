@@ -1,0 +1,28 @@
+version: '3'
+
+volumes:
+  db:
+
+services:
+  auth_server2_traffic_box:
+    image: node:18
+    restart: no
+    env_file: ".env"
+    working_dir: /app
+    volumes:
+      - ./server:/app
+    links:
+      - database_auth_server2_traffic_box
+    ports:
+      - '${HOST_PORT}:${CONTAINER_PORT}'
+      - '9229:9229'
+    command: npm run test
+
+  database_auth_server2_traffic_box:
+    image: postgres:15.2-alpine
+    restart: no
+    env_file: ".env"
+    volumes:
+      - db:/var/lib/postgresql/data
+    ports:
+      - '${DATABASE_PORT}:5432'

@@ -1,0 +1,35 @@
+.item{
+    @apply
+    flex
+    items-center
+    gap-10
+    border-2
+    border-solid
+    border-primary
+    rounded-lg
+    py-5
+    px-10
+    cursor-pointer
+    hover:bg-amber-200
+    hover:bg-opacity-10;
+}
+.item *{
+    transition: all .1s ease-in;
+}
+.img{}
+.level{
+    @apply opacity-0;
+}
+.title{
+    transform: translateY(12px);
+}
+
+.item:hover .img {
+    transform: scale(1.15);
+}
+.item:hover .level {
+    @apply opacity-100
+}
+.item:hover .title{
+    transform: translateY(0px);
+}

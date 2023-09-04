@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #111011;
+  --secondary: #ffffff;
+  --passive: #1E1D1E;
+  --text_passive: #3A393A;
+  --primary: #ffdb70;
+  --primary2: #B2A56580;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #111011;
+    --secondary: #ffffff;
+    --passive: #3A393A;
+    --primary: #B2A565;
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background-color: var(--foreground);
+}
