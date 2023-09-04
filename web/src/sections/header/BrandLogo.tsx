@@ -1,8 +1,7 @@
-import Logo from '@/sections/header/Logo'
 import { NavbarBrand } from '@nextui-org/react'
 import { metadata_config } from '@/config/metadata'
 
-export default function () {
+export default function BrandLogo () {
     return (
         <NavbarBrand>
             {/*<Logo />*/}

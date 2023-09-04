@@ -1,12 +1,13 @@
+'use client';
 // @ts-ignore
-import Typed from "typed.js"
-import React, { useEffect, useRef, useState } from 'react'
+import Typed from 'typed.js'
+import React, { useEffect, useRef } from 'react'
 
 export type AsContainerPropsType = {
 	children: string[]
 } & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
 
-export default function (props: AsContainerPropsType) {
+export default function TextPrinting (props: AsContainerPropsType) {
 	const { children, className, ...rest_props } = props
 	const el = useRef(null);
 
@@ -20,7 +21,7 @@ export default function (props: AsContainerPropsType) {
 			loop: true
 		});
 		return () => typed.destroy();
-	}, []);
+	}, [children]);
 
 	return (
 		<div {...rest_props} className={"flex flex-row w-full justify-start whitespace-nowrap "+className}>

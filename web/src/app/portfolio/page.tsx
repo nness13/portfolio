@@ -11,7 +11,7 @@ export default function Home () {
 		<div className="bg-foreground w-full py-20 min-h-[calc(100vh-4rem)] flex flex-col items-center gap-10">
 			<div className="flex flex-col items-center">
 				<div className="text-secondary text-2xl font-bold">Past Project Experience</div>
-				<div className="text-primary">Explore the projects I've worked on so far</div>
+				<div className="text-primary">Explore the projects I&apos;ve worked on so far</div>
 			</div>
 			<div className="grid grid-cols-3 gap-5 w-2/4 text-secondary">
 				{portfolio_projects_data.map(project => (
@@ -40,4 +40,3 @@ export default function Home () {
 		</div>
 	)
 }
-

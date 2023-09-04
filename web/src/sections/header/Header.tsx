@@ -1,15 +1,15 @@
 'use client'
 
-import { Link, Navbar, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuToggle } from '@nextui-org/react'
+import { Navbar, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuToggle } from '@nextui-org/react'
 import { routes_entries, routes_values } from '@/config/routes'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import BrandLogo from '@/sections/header/BrandLogo'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
-import NextLink from "next/link"
+import NextLink from 'next/link'
 
-export default function () {
+export default function Header () {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	return (
@@ -39,9 +39,9 @@ export default function () {
 			</NavbarContent>
 
 			<NavbarContent justify="end">
-				<Link href="#" target="_blank" className="fa-lg text-secondary" as={NextLink}>
+				<NextLink href="/" target="_blank" className="fa-lg text-secondary">
 					<FontAwesomeIcon icon={faGithub} size="2xl"/>
-				</Link>
+				</NextLink>
 			</NavbarContent>
 
 			<NavbarMenu className="bg-foreground">
@@ -56,14 +56,13 @@ export default function () {
 export function NavbarMyItem ({options}: {options: routes_values}) {
 	const pathname = usePathname();
 	const [active, setActive] = useState(pathname === options.route)
-	useEffect(() => setActive(pathname === options.route), [pathname])
-
+	useEffect(() => setActive(pathname === options.route), [pathname, options.route])
 
 	return (
 		<NavbarItem className="col-auto transition-all" isActive={active}>
-			<Link href={options.route} className={`font-bold text-base ${active ? "text-secondary" : "text-text_passive"}`} as={NextLink}>
+			<NextLink href={options.route} className={`font-bold text-base ${active ? "text-secondary" : "text-text_passive"}`}>
 				<div>{options.title}</div>
-			</Link>
+			</NextLink>
 			<div className={`w-full h-1.5 ${active ? "bg-primary" : "bg-passive"} rounded-xl ${active ? "" : "hidden"}`}/>
 		</NavbarItem>
 	)

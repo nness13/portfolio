@@ -10,7 +10,7 @@ type props_type = {
 		TabComponent: JSX.Element
 	}[]
 }
-export default function ({ tabs, default_index }: props_type) {
+export default function Tabs ({ tabs, default_index }: props_type) {
 	const [activeTab, setActiveTab] = useState(default_index)
 	const ActiveTab = tabs.find(t => t.key === activeTab) || tabs[0]
 
