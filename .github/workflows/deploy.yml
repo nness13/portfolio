@@ -1,0 +1,28 @@
+name: Deploy Services
+on:
+  push:
+#    branches: [ master ]
+
+jobs:
+  run-tests:
+    name: Deploy on Server
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: appleboy/ssh-action@v0.1.2
+        with:
+          host: ${{secrets.MAIN_SERVER_HOST}}
+          port: ${{secrets.MAIN_SERVER_PORT}}
+          username: ${{ secrets.MAIN_SERVER_USER }}
+          key: ${{ secrets.KEY }}
+          script: |
+            if [ -d "app" ]; then
+             cd app
+             git pull
+             docker compose -f ./docker-compose.prod.yml --build up -d
+            else
+             cd /
+             git clone https://${{ secrets.MAIN_GITHUB_TOKEN }}@github.com/nness13/${{ GITHUB_REPOSITORY }}.git app
+             cd app
+            fi

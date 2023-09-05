@@ -4,20 +4,20 @@ volumes:
   db:
 
 services:
-  auth_server_traffic_box:
+  portfolio_service:
     image: node:18
     restart: always
     env_file: ".env"
+    working_dir: /app
     volumes:
-      - ./server:/app
-      - /app/node_modules
+      - ./web:/app
     links:
-      - database_auth_server_traffic_box
+      - database_portfolio_service
     ports:
-      - '${APP_SOCKET_CONTAINER_PORT}:${APP_SOCKET_PORT}'
+      - '${HOST_PORT}:${CONTAINER_PORT}'
     command: npm run build && npm run start
 
-  database_auth_server_traffic_box:
+  database_portfolio_service:
     image: postgres:15.2-alpine
     restart: always
     env_file: ".env"

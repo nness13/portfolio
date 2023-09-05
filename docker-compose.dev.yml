@@ -4,7 +4,7 @@ volumes:
   db:
 
 services:
-  softup_site_service:
+  softup_siportfolio_service:
     image: node:18
     restart: no
     env_file: ".env"
@@ -12,13 +12,13 @@ services:
     volumes:
       - ./web:/app
     links:
-      - database_softup_site_service
+      - database_portfolio_service
     ports:
       - '${HOST_PORT}:${CONTAINER_PORT}'
       - '9229:9229'
     command: npm run dev
 
-  database_softup_site_service:
+  database_portfolio_service:
     image: postgres:15.2-alpine
     restart: no
     env_file: ".env"
