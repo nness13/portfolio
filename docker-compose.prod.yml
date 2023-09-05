@@ -15,7 +15,7 @@ services:
       - database_auth_server_traffic_box
     ports:
       - '${APP_SOCKET_CONTAINER_PORT}:${APP_SOCKET_PORT}'
-    command: npm run build:production
+    command: npm run build && npm run start
 
   database_auth_server_traffic_box:
     image: postgres:15.2-alpine
