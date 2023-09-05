@@ -1,7 +1,7 @@
 name: Deploy Services
 on:
   push:
-#    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   run-tests:
@@ -25,4 +25,5 @@ jobs:
              cd /
              git clone https://${{ secrets.MAIN_GITHUB_TOKEN }}@github.com/nness13/${{ github.event.repository.name }}.git app
              cd app
+             docker compose -f ./docker-compose.prod.yml --build up -d
             fi
