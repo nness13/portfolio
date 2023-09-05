@@ -23,6 +23,6 @@ jobs:
              docker compose -f ./docker-compose.prod.yml --build up -d
             else
              cd /
-             git clone https://${{ secrets.MAIN_GITHUB_TOKEN }}@github.com/nness13/${{ GITHUB_REPOSITORY }}.git app
+             git clone https://${{ secrets.MAIN_GITHUB_TOKEN }}@github.com/nness13/${{ github.event.repository.name }}.git app
              cd app
             fi
