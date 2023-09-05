@@ -21,16 +21,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Change directory to /web
-        run: cd web
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: "16"
       - name: Install dependencies
-        run: npm i
+        run: cd web && npm i
       - name: Build with Next.js
-        run: ls && npm run build
+        run: cd web && npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
