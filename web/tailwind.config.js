@@ -4,6 +4,7 @@ const colors = {
     foreground: 'var(--foreground)',
     secondary: 'var(--secondary)',
     passive: 'var(--passive)',
+    passive2: 'var(--passive2)',
     text_passive: 'var(--text_passive)',
     primary: 'var(--primary)',
     primary2: 'var(--primary2)',

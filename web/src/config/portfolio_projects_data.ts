@@ -18,8 +18,8 @@ export const portfolio_projects_data = [
 			tech_stack_data.nextjs.title,
 			tech_stack_data.tailwind.title,
 		],
-		link: "",
-		github: ""
+		link: "http://ns13.online/portfolio",
+		github: "https://github.com/nness13/portfolio"
 	},
 	{
 		title: "Personal Website",
@@ -29,8 +29,8 @@ export const portfolio_projects_data = [
 			tech_stack_data.nextjs.title,
 			tech_stack_data.tailwind.title,
 		],
-		link: "",
-		github: ""
+		link: "http://ns13.online/portfolio",
+		github: "https://github.com/nness13/portfolio"
 	},
 	{
 		title: "Personal Website",
@@ -40,8 +40,8 @@ export const portfolio_projects_data = [
 			tech_stack_data.nextjs.title,
 			tech_stack_data.tailwind.title,
 		],
-		link: "",
-		github: ""
+		link: "http://ns13.online/portfolio",
+		github: "https://github.com/nness13/portfolio"
 	},
 	{
 		title: "Personal Website",
@@ -51,8 +51,8 @@ export const portfolio_projects_data = [
 			tech_stack_data.nextjs.title,
 			tech_stack_data.tailwind.title,
 		],
-		link: "",
-		github: ""
+		link: "http://ns13.online/portfolio",
+		github: "https://github.com/nness13/portfolio"
 	},
 	{
 		title: "Personal Website",
@@ -62,7 +62,7 @@ export const portfolio_projects_data = [
 			tech_stack_data.nextjs.title,
 			tech_stack_data.tailwind.title,
 		],
-		link: "",
-		github: ""
+		link: "http://ns13.online/portfolio",
+		github: "https://github.com/nness13/portfolio"
 	}
 ] satisfies type_data[]

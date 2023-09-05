@@ -1,7 +1,7 @@
 'use client'
 import { Card } from '@nextui-org/react'
 import Image from 'next/image'
-import { stack_data_type, tabs, tabs_array } from '@/config/stack_data'
+import { stack_data_type, tabs_array } from '@/config/stack_data'
 import Tabs from '@/components/Tabs'
 import css from '@/app/about/style.module.css'
 
@@ -27,9 +27,9 @@ function AboutMeBlock () {
 				<div className="w-1/3">
 					<Image src="/ns13.jpg" alt="" width={500} height={500} className="rounded-full"/>
 				</div>
-				<div className="w-2/3 flex items-center font-bold text-xl">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda commodi, doloribus et expedita in molestias, obcaecati omnis optio placeat porro, provident quibusdam soluta suscipit tempora tenetur voluptatibus! Facilis, quod?<br/><br/>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda commodi, doloribus et expedita in molestias, obcaecati omnis optio placeat porro, provident quibusdam soluta suscipit tempora tenetur voluptatibus! Facilis, quod?
+				<div className="w-2/3 flex items-center text-xl">
+					Hello there! I go by the name Andriy Nester, and I'm a passionate web developer based in Lviv, Ukraine. My journey in the world of web development spans over a year, with a focus on crafting impressive back-end solutions. To me, coding isn't just a profession; it's an art form that carries its own unique aesthetic charm.<br/><br/>
+					My primary role revolves around sculpting websites that seamlessly blend functionality and user-friendliness while exuding an irresistible visual appeal. I'm all about adding that personal touch to your digital presence, ensuring your website not only captures attention but also provides an effortless user experience. My ultimate mission is to translate your message and identity into a masterpiece of creativity. If you're interested in collaborating with me, don't hesitate to reach out via the provided contact information. Let's create something extraordinary together!
 				</div>
 			</div>
 		</Card>

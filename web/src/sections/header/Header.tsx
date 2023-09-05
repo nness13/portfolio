@@ -39,7 +39,7 @@ export default function Header () {
 			</NavbarContent>
 
 			<NavbarContent justify="end">
-				<NextLink href="/" target="_blank" className="fa-lg text-secondary">
+				<NextLink href="https://github.com/nness13" target="_blank" className="fa-lg text-secondary">
 					<FontAwesomeIcon icon={faGithub} size="2xl"/>
 				</NextLink>
 			</NavbarContent>
