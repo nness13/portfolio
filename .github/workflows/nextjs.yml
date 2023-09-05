@@ -25,10 +25,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
+      - name: Change directory to /web
+        run: cd web
       - name: Install dependencies
-        run: cd web && npm i
+        run: ls && npm i
       - name: Build with Next.js
-        run: cd web && npm run build
+        run: ls && npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
