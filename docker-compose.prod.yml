@@ -4,7 +4,7 @@ volumes:
   db:
 
 services:
-  portfolio_service:
+  portfolio_service_prod:
     image: node:18
     restart: always
     env_file: ".env"
@@ -12,12 +12,12 @@ services:
     volumes:
       - ./web:/app
     links:
-      - database_portfolio_service
+      - database_portfolio_service_prod
     ports:
       - '${HOST_PORT}:${CONTAINER_PORT}'
-    command: npm run build && npm run start
+    command: sh -c "npm run build && npm run start"
 
-  database_portfolio_service:
+  database_portfolio_service_prod:
     image: postgres:15.2-alpine
     restart: always
     env_file: ".env"
