@@ -2,9 +2,12 @@
 const nextConfig = {
 	output: 'export',
 	images: {
-		loader: 'custom',
-		loaderFile: './src/app/image.ts',
-	}
+		unoptimized: true,
+	},
+	// images: {
+	// 	loader: 'custom',
+	// 	loaderFile: './src/app/image.ts',
+	// }
 	// assetPrefix: '/portfolio',
 	// publicRuntimeConfig: {
 	// 	basePath: "/portfolio",
