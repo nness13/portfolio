@@ -7,13 +7,16 @@ export default function Home () {
 	return (
 		<PageSection>
 			<ContentContainer>
-				<ContentBlock className="justify-center">
-					<div className="text-primary text-2xl">Hello World, I`m</div>
-					<div className="text-6xl">NS13</div>
-					<TextPrinting className="text-primary text-2xl">
+				<ContentBlock className="justify-center md:text-start text-center">
+					<div className="text-primary text-xl">Hello World, I&apos;m</div>
+					<div className="text-6xl font-bold fadein-up">NS13</div>
+					<TextPrinting className="flex md:justify-start justify-center typewrite text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-yellow-500 md:text-2xl fadein-up">
 						{['Web Developer', 'Full - stack engineer']}
 					</TextPrinting>
-					<div className="text-xm">Welcome to my personal website 👋🏻</div>
+					<div className="text-xm flex md:flex-row flex-col gap-2 fade-in-from-left">
+						<div>Welcome to my personal website </div>
+						<div className="wave">👋🏻</div>
+					</div>
 				</ContentBlock>
 				<ContentBlock>
 					<Image
@@ -21,7 +24,7 @@ export default function Home () {
 						alt="NS13"
 						width={500}
 						height={500}
-						className="rounded-full border-primary border-5 shadow-[0px_0px_200px_0px_var(--primary)]"
+						className="rounded-full border-primary border-5 shadow-[0px_0px_50px_0px_var(--primary)] fadein-right"
 					/>
 				</ContentBlock>
 			</ContentContainer>

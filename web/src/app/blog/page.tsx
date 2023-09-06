@@ -6,16 +6,18 @@ import * as solid_icons from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 
-export default function Home () {
+export default function Blog () {
 	return (
-		<div className="bg-foreground w-full py-20 min-h-[calc(100vh-4rem)] flex flex-col items-center gap-10">
-			<div className="flex flex-col items-center">
-				<div className="text-secondary text-2xl font-bold">Let&apos;s share experiences, stories, and knowledge together.</div>
+		<div className="bg-foreground w-full md:py-20 min-h-[calc(100vh-4rem)] flex flex-col items-center md:gap-10">
+			<div className="flex flex-col mx-10 text-center items-center fadein-bot">
+				<div className="text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-amber-300">Let&apos;s share experiences, stories, and knowledge together.</div>
 			</div>
-			<div className="grid grid-cols-3 gap-5 w-2/4 text-secondary">
+			<div className="grid md:grid-cols-3 grid-cols-1 gap-5 m-10 md:w-2/4 text-secondary fade-zoom-in">
 				{portfolio_projects_data.map(project => (
 					<div className="bg-passive p-5 flex flex-col gap-3 rounded-2xl hover:translate-y-[-5px] hover:bg-passive2 transition" key={project.title}>
-						<Image className="rounded-2xl" src={project.img} alt={project.img} width={400} height={400}/>
+						<div className="w-full flex justify-center">
+							<Image className="rounded-2xl w-full" src={project.img} alt={project.img} width={400} height={400}/>
+						</div>
 						<div className="text-center">{project.title}</div>
 						<div>{project.description}</div>
 						<div className="text-primary">{project.tech_stack_tags.join(', ')}</div>

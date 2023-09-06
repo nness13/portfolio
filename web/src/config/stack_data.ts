@@ -51,6 +51,7 @@ export const tools_stack_data = {
 	"jira": { title: "Jira", img: "https://cdn.worldvectorlogo.com/logos/jira-1.svg", level: "Beginner" },
 	"yarn": { title: "Yarn", img: "https://www.vectorlogo.zone/logos/yarnpkg/yarnpkg-icon.svg", level: "Advanced" },
 	"npm": { title: "npm", img: "https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg", level: "Advanced" },
+	"husky": { title: "Husky", img: "/tech_stack/husky.png", level: "Advanced" },
 	"postman": { title: "Postman", img: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg", level: "Intermediate" },
 }
 export const tools_stack_data_array = Object.entries(tools_stack_data).map(([key, el]) => ({...el, key})) as stack_data_type

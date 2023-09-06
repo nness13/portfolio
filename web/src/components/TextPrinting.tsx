@@ -14,8 +14,8 @@ export default function TextPrinting (props: AsContainerPropsType) {
 	useEffect(() => {
 		const typed = new Typed(el.current, {
 			strings: children,
-			startDelay: 300,
-			typeSpeed: 100,
+			startDelay: 0,
+			typeSpeed: 50,
 			backSpeed: 100,
 			backDelay: 100,
 			loop: true

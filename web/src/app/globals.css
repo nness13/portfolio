@@ -7,7 +7,7 @@
   --secondary: #ffffff;
   --passive: #1E1D1E;
   --passive2: #282828;
-  --text_passive: #3A393A;
+  --text_passive: rgb(55 65 81);
   --primary: #ffdb70;
   --primary2: #B2A56580;
   --foreground-rgb: 0, 0, 0;
@@ -29,4 +29,151 @@
 
 body {
   background-color: var(--foreground);
+}
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  10% {
+    transform: rotate(14deg)
+  }
+
+  20% {
+    transform: rotate(-8deg)
+  }
+
+  30% {
+    transform: rotate(14deg)
+  }
+
+  40% {
+    transform: rotate(-4deg)
+  }
+
+  50% {
+    transform: rotate(10deg)
+  }
+
+  60% {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(0deg)
+  }
+}
+
+.fadein-up {
+  opacity: 0;
+  animation-name: fadeInUp;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-delay: .5s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,100%,0)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateZ(0)
+  }
+}
+
+.fade-in-from-left {
+  opacity: 0;
+  animation: fadeInLeft .5s ease-out forwards;
+  animation-delay: .5s
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+.fadein-right {
+  opacity: 0;
+  animation: fadeInRight .5s ease-out forwards;
+  animation-delay: .5s
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+.fadein-bot {
+  opacity: 0;
+  animation: fadeInBot .5s forwards
+}
+
+@keyframes fadeInBot {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,-100%,0)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateZ(0)
+  }
+}
+
+
+.fade-zoom-in {
+  animation: fadeZoomIn 1s ease-in-out
+}
+@keyframes fadeZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(.5)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+
+.fadein-1 {
+  animation-delay: .2s
+}
+
+.fadein-2 {
+  animation-delay: .4s
+}
+
+.fadein-3 {
+  animation-delay: .6s
+}
+
+.fade-500 {
+  animation-delay: .5s
 }
