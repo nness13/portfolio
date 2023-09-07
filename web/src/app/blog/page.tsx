@@ -1,6 +1,5 @@
 'use client'
 import Image from 'next/image'
-import { portfolio_projects_data } from '@/config/portfolio_projects_data'
 import * as brand_icons from '@fortawesome/free-brands-svg-icons'
 import * as solid_icons from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -13,10 +12,15 @@ export default function Blog () {
 				<div className="text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-amber-300">Let&apos;s share experiences, stories, and knowledge together.</div>
 			</div>
 			<div className="grid md:grid-cols-3 grid-cols-1 gap-5 m-10 md:w-2/4 text-secondary fade-zoom-in">
-				{portfolio_projects_data.map(project => (
+				{( [] as any[] ).map(project => (
 					<div className="bg-passive p-5 flex flex-col gap-3 rounded-2xl hover:translate-y-[-5px] hover:bg-passive2 transition" key={project.title}>
 						<div className="w-full flex justify-center">
-							<Image className="rounded-2xl w-full" src={project.img} alt={project.img} width={400} height={400}/>
+							{project.img ? <Image className="rounded-2xl w-full" src={project.img} alt={project.img} width={400} height={400}/> : null}
+							{project.video
+								? <div>
+									<video src={project.video} autoPlay muted loop/>
+								</div>
+								: null}
 						</div>
 						<div className="text-center">{project.title}</div>
 						<div>{project.description}</div>

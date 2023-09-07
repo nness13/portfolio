@@ -17,7 +17,12 @@ export default function Home () {
 				{portfolio_projects_data.map(project => (
 					<div className="bg-passive p-5 flex flex-col gap-3 rounded-2xl hover:translate-y-[-5px] hover:bg-passive2 transition" key={project.title}>
 						<div className="w-full flex justify-center">
-							<Image className="rounded-2xl w-full" src={project.img} alt={project.img} width={400} height={400}/>
+							{project.img ? <Image className="rounded-2xl w-full" src={project.img} alt={project.img} width={400} height={400}/> : null}
+							{project.video
+								? <div>
+									<video src={project.video} autoPlay muted loop/>
+								</div>
+								: null}
 						</div>
 						<div className="text-center">{project.title}</div>
 						<div>{project.description}</div>
