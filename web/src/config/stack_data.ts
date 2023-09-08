@@ -34,6 +34,7 @@ export const tech_stack_data = {
 	"jest": { title: "Jest", img: "/tech_stack/jest.png", level: "Intermediate" },
 	"puppeteer": { title: "Puppeteer", img: "https://www.vectorlogo.zone/logos/pptrdev/pptrdev-icon.svg", level: "Intermediate" },
 	"zod": { title: "Zod", img: "/tech_stack/zod.png", level: "Advanced" },
+	"swagger": { title: "Swagger", img: "/tech_stack/swagger.png", level: "Advanced" },
 	"apache": { title: "Apache", img: "https://upload.wikimedia.org/wikipedia/commons/1/10/Apache_HTTP_server_logo_%282019-present%29.svg", level: "Intermediate" },
 	"wordpress": { title: "WordPress", img: "https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg", level: "Beginner" },
 	"laravel": { title: "Laravel", img: "https://www.vectorlogo.zone/logos/laravel/laravel-icon.svg", level: "Intermediate" },

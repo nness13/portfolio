@@ -15,18 +15,20 @@ export default function Home () {
 			</div>
 			<div className="grid md:grid-cols-3 grid-cols-1 gap-5 m-10 md:w-2/4 text-secondary fade-zoom-in">
 				{portfolio_projects_data.map(project => (
-					<div className="bg-passive p-5 flex flex-col gap-3 rounded-2xl hover:translate-y-[-5px] hover:bg-passive2 transition" key={project.title}>
-						<div className="w-full flex justify-center">
-							{project.img ? <Image className="rounded-2xl w-full" src={project.img} alt={project.img} width={400} height={400}/> : null}
-							{project.video
-								? <div>
-									<video src={project.video} autoPlay muted loop/>
-								</div>
-								: null}
+					<div className="bg-passive p-5 flex flex-col gap-3 justify-between rounded-2xl hover:translate-y-[-5px] hover:bg-passive2 transition" key={project.title}>
+						<div className="flex flex-col gap-3">
+							<div className="w-full flex justify-center">
+								{project.img ? <Image className="rounded-2xl w-full" src={project.img} alt={project.img} width={400} height={400}/> : null}
+								{project.video
+									? <div>
+										<video src={project.video} autoPlay muted loop/>
+									</div>
+									: null}
+							</div>
+							<div className="text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-amber-300">{project.title}</div>
+							<div className="whitespace-pre-wrap">{project.description}</div>
+							<div className="text-primary">{project.tech_stack_tags.join(', ')}</div>
 						</div>
-						<div className="text-center">{project.title}</div>
-						<div>{project.description}</div>
-						<div className="text-primary">{project.tech_stack_tags.join(', ')}</div>
 						<div className="flex flex-row gap-3 justify-end">
 							{project.github
 								? <Link href={project.github} target="_blank">
