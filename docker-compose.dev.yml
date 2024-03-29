@@ -11,18 +11,13 @@ services:
     working_dir: /app
     volumes:
       - ./web:/app
-    links:
-      - database_portfolio_service_dev
+    networks:
+      - portfolio_network
     ports:
       - '${HOST_PORT}:${CONTAINER_PORT}'
       - '9229:9229'
     command: npm run dev
 
-  database_portfolio_service_dev:
-    image: postgres:15.2-alpine
-    restart: no
-    env_file: ".env"
-    volumes:
-      - db:/var/lib/postgresql/data
-    ports:
-      - '${DATABASE_PORT}:5432'
+networks:
+  portfolio_network:
+    driver: bridge

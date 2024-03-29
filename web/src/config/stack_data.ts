@@ -24,6 +24,8 @@ export const tech_stack_data = {
 	"reactjs": { title: "ReactJS", img: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg", level: "Advanced" },
 	"nextjs": { title: "Next.js", img: "/tech_stack/nextjs.svg", level: "Advanced" },
 	"redux": { title: "Redux", img: "/tech_stack/redux.png", level: "Advanced" },
+	"redux-toolkit": { title: "ReduxToolkit", img: "/tech_stack/redux.png", level: "Advanced" },
+	"mobx": { title: "mobx", img: "/tech_stack/mobx.png", level: "Advanced" },
 	"tailwind": { title: "Tailwind CSS", img: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg", level: "Advanced" },
 	"telegraf": { title: "Telegraf", img: "https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg", level: "Advanced" },
 	"prisma": { title: "Prisma", img: "/tech_stack/prisma.svg", level: "Advanced" },
